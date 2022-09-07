@@ -1,0 +1,565 @@
+<!--
+=========================================================
+* * University Student Dashboard - v1.0.1
+========================================================
+
+* Product Page: https://www.jaykef.com
+* Copyright 2021 (https://www.jaykef.com)
+
+
+* Coded by Jaykef
+
+========================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>
+        学生卡｜Beijing Institute of Technology
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./assets/css/master.css?v=1.0.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="./assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+    <div class="wrapper">
+        <div class="sidebar">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+    -->
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="home.html">
+                            <i class="fa fa-home pt-1" style="color: orange;"></i>
+                            <h4 id="wc">网络教室</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard-cn.html">
+                            <i class="fa fa-th-large pt-1" style="color: green;"></i>
+                            <h4 id="wc">个人主页</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="courses.html">
+                            <i class="fa fa-graduation-cap pt-1" style="color: violet;"></i>
+                            <h4 id="wc">我的课程</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="result.html">
+                            <i class="fa fa-file pt-1" style="color: orangered;"></i>
+                            <h4 id="wc">成绩</h4>
+                        </a>
+                    </li>
+                    <div class="logo">
+                    </div>
+                    <li>
+                        <a href="">
+                            <h4 id="wc">校园服务</h4>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="card-cn.html">
+                            <i class="fa fa-id-card pt-1" style="color: green;"></i>
+                            <h4 id="wc">学生卡</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bus.html">
+                            <i class="fa fa-bus pt-1" style="color: gold;"></i>
+                            <h4 id="wc">班车服务</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="food.html">
+                            <i class="fa fa-cutlery pt-1" style="color: red"></i>
+                            <h4 id="wc">校园食堂</h4>
+                        </a>
+                    </li>
+                    <li class="active-pro">
+                        <a href="card-cn.html">
+                            <i class="fa fa-mobile pt-1" style="color: lightgreen;"></i>
+                            <h4 class="wc">支付助手</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent ">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-toggle d-inline">
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
+                        </div>
+                        <img src="./assets/img/logo.png" width="50" height="50" class="logo">
+                        <a class="navbar-brand" href="index.html">乐学 | 北京理工大学 <br>
+                            <p>Beijing Institute of Technology</p>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="search-bar input-group">
+                                <button class="btn btn-link" id="search-button" data-toggle="modal"
+                                    data-target="#searchModal"><i class="fa fa-search pt-2"></i>
+                                    <span class="d-lg-none d-md-block">Search</span>
+                                </button>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <div class="notification d-none d-lg-block d-xl-block"></div>
+                                    <i class="fa fa-comments pt-2"></i>
+                                    <p class="d-lg-none">
+                                        Chats
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="card.html" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <i class="fa fa-globe pt-2"></i>
+                                    <p class="d-lg-none">
+                                        Lang
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu dropdown-right dropdown-navbar">
+                                    <li class="nav-link"><a href="card.html" class="nav-item dropdown-item">Eng</a>
+                                    </li>
+                                    <li class="nav-link"><a href="card-cn.html" class="nav-item dropdown-item">Chn</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <div class="notification d-none d-lg-block d-xl-block"></div>
+                                    <i class="fa fa-bell pt-2"></i>
+                                    <p class="d-lg-none">
+                                        Notifications
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                                    <li class="nav-link"><a href="#" class="nav-item dropdown-item">Mike John responded
+                                            to your email</a>
+                                    </li>
+                                    <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You
+                                            have 5 more
+                                            tasks</a></li>
+                                    <li class="nav-link"><a href="javascript:void(0)"
+                                            class="nav-item dropdown-item">Your friend Michael
+                                            is in town</a></li>
+                                    <li class="nav-link"><a href="javascript:void(0)"
+                                            class="nav-item dropdown-item">Another
+                                            notification</a></li>
+                                    <li class="nav-link"><a href="javascript:void(0)"
+                                            class="nav-item dropdown-item">Another one</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <div class="photo">
+                                        <img src="./assets/img/jaykef.jpg" alt="Profile Photo">
+                                    </div>
+                            <li class="user"><span>Jaykef(苏杰)<br>Software Engineering</span>
+                                <i class="fa fa-angle-down"></i>
+                            </li>
+                            <p class="d-lg-none">
+                                Log out
+                            </p>
+                            </a>
+                            <ul class="dropdown-menu dropdown-navbar">
+                                <li class="nav-link"><a href="javascript:void(0)"
+                                        class="nav-item dropdown-item">Profile</a></li>
+                                <li class="nav-link"><a href="javascript:void(0)"
+                                        class="nav-item dropdown-item">Settings</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Log
+                                        out</a></li>
+                            </ul>
+                            </li>
+                            </li>
+                            <li class="separator d-lg-none px-2"></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog"
+                aria-labelledby="searchModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="tim-icons icon-simple-remove"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar -->
+            <div class="content mt-4">
+                <h1 class="content-title">我的学生卡</h1>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card card-chart">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body pb-4">
+                                        <div class="chart-area" style="height: 300px;">
+                                            <div class=" px-3">
+                                                <img src="./assets/img/card.jpg"
+                                                    style="border-radius: 1rem; width: 100%; height: 300px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card card-chart">
+                                    <div class=" card-header">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chart-area">
+                                            <div class="px-3">
+                                                <ul class="course-nav">
+                                                    <li>
+                                                        <a href="#" style="display: inline-flex; text-align: center;">
+                                                            <img src="./assets/img/recharge.png"
+                                                                style="border-radius: 1rem; width: 48px; height: 48px;">
+                                                            <h4 class="mt-2 px-1">校园卡充值</h4>
+                                                        </a>
+                                                    </li>
+                                                    <li class="pb-1">
+                                                        <a href="#" style="display: inline-flex; text-align: center;">
+                                                            <img src="./assets/img/internet.png"
+                                                                style="width: 40px; height: 40px">
+                                                            <h4 class="mt-1 px-2">网费充值</h4>
+                                                        </a>
+                                                    </li>
+                                                    <li class="pb-1">
+                                                        <a href="home.html"
+                                                            style="display: inline-flex; text-align: center;">
+                                                            <img src="./assets/img/recharge1.png"
+                                                                style="border-radius: 2rem; width: 33px; height: 33px;">
+                                                            <h4 class="mt-1 px-2">支付助手</h4>
+                                                        </a>
+                                                    </li>
+                                                    <li class="pb-1">
+                                                        <a href="home.html"
+                                                            style="display: inline-flex; text-align: center;">
+                                                            <img src="./assets/img/bus.png"
+                                                                style="border-radius: 1rem; width: 35px; height: 35px;">
+                                                            <h4 class="mt-1 px-2">班车服务</h4>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-12">
+                                <div class="card card-chart">
+                                    <div class="card-header">
+                                        <h3 class="card-title px-2 pt-1">IT服务</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row px-3">
+                                            <div class="col-md-3">
+                                                <ul class="course-nav">
+                                                    <li class="pb-1">
+                                                        <a href="home.html"
+                                                            style="display: inline-flex; text-align: center;">
+                                                            <img src="./assets/img/wifi.png"
+                                                                style="border-radius: 1rem; width: 35px; height: 35px;">
+                                                            <h4 class="mt-2 px-2">外网认证</h4>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul class="course-nav">
+                                                    <li class="pb-1">
+                                                        <a href="home.html"
+                                                            style="display: inline-flex; text-align: center;">
+                                                            <img src="./assets/img/iptv.png"
+                                                                style="border-radius: 2rem; width: 35px; height: 35px; color: red;">
+                                                            <h4 class="mt-2 px-2">校内IPTV</h4>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul class="course-nav">
+                                                    <li class="pb-1">
+                                                        <a href="home.html"
+                                                            style="display: inline-flex; text-align: center;">
+                                                            <img src="./assets/img/ibeili.jpg"
+                                                                style="border-radius: 2rem; width: 34px; height: 34px;">
+                                                            <h4 class="mt-2 px-3">i北理</h4>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul class="course-nav">
+                                                    <li class="pb-1">
+                                                        <a href="home.html"
+                                                            style="display: inline-flex; text-align: center;">
+                                                            <img src="./assets/img/email.jpg"
+                                                                style="border-radius: 2rem; width: 35px; height:35px;">
+                                                            <h4 class="mt-2 px-2">钉邮件</h4>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-user">
+                            <div class="card-header">
+                                <h3 class="card-title px-2 pt-1">个人信息</h3>
+                            </div>
+                            <div class="card-body card-user-body">
+                                <div class="cover">
+                                    <img src="./assets/img/cover.jpg">
+                                </div>
+                                <p class="card-text">
+                                <div class="author">
+                                    <a href="javascript:void(0)">
+                                        <img class="avatar " src="./assets/img/jaykef.jpg" alt="...">
+                                        <h5 class="title px-2">Jaykef (苏杰)</h5>
+                                    </a>
+                                    <h6 class="description" style="left: 130px;">
+                                        软件工程-1820201080
+                                      </h6>
+                                </div>
+                                </p>
+                            </div>
+                            <div class="chats" style="margin-top: -50px;">
+                                <div class="chart-area">
+                                    <div class="card-header">
+                                        <h3 class="card-title px-2 pt-1">微信</h3>
+                                    </div>
+                                    <div class="px-3 pb-2">
+                                        <a href="#"><img src="./assets/img/chc.png"
+                                                style="border-radius: 1rem; width: 100%;"></a>
+                                    </div>
+                                </div>
+                                <div class="card-description p-2">
+                                    <div class="cover">
+                                        <img src="./assets/img/card.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="fixed-plugin">
+        <div class="dropdown show-dropdown">
+            <a href="#" data-toggle="dropdown">
+                <i class="fa fa-lightbulb fa-2x"> </i>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header-title"> Sidebar Theme </li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger background-color">
+                        <div class="badge-colors text-center">
+                            <span class="badge filter badge-primary active" data-color="primary"></span>
+                            <!--   <span class="badge filter badge-info" data-color="white"></span> -->
+                            <span class="badge filter badge-success" data-color="green"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li class="adjustments-line text-center color-change">
+                    <span class="color-label">LIGHT MODE</span>
+                    <span class="badge light-badge mr-2"></span>
+                    <span class="badge dark-badge ml-2"></span>
+                    <span class="color-label">DARK MODE</span>
+                </li>
+                <li class="header-title pb-5">©️ 2021 By Jaykef</li>
+            </ul>
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/jquery.min.js"></script>
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/core/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <!--
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+    <!-- Chart JS -->
+    <script src="./assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="./assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="./assets/js/black-dashboard.min.js?v=1.0.0"></script>
+    <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+    <script src="./assets/demo/demo.js"></script>
+    <script src="https://use.fontawesome.com/6f7dfef630.js"></script>
+    <script>
+        $(document).ready(function () {
+            $().ready(function () {
+                $sidebar = $('.sidebar');
+                $navbar = $('.navbar');
+                $main_panel = $('.main-panel');
+
+                $full_page = $('.full-page');
+
+                $sidebar_responsive = $('body > .navbar-collapse');
+                sidebar_mini_active = true;
+                white_color = false;
+
+                window_width = $(window).width();
+
+                fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+                $('.fixed-plugin a').click(function (event) {
+                    if ($(this).hasClass('switch-trigger')) {
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else if (window.event) {
+                            window.event.cancelBubble = true;
+                        }
+                    }
+                });
+
+                $('.fixed-plugin .background-color span').click(function () {
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+
+                    var new_color = $(this).data('color');
+
+                    if ($sidebar.length != 0) {
+                        $sidebar.attr('data', new_color);
+                    }
+
+                    if ($main_panel.length != 0) {
+                        $main_panel.attr('data', new_color);
+                    }
+
+                    if ($full_page.length != 0) {
+                        $full_page.attr('filter-color', new_color);
+                    }
+
+                    if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.attr('data', new_color);
+                    }
+                });
+
+                $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function () {
+                    var $btn = $(this);
+
+                    if (sidebar_mini_active == true) {
+                        $('body').removeClass('sidebar-mini');
+                        sidebar_mini_active = false;
+                        blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+                    } else {
+                        $('body').addClass('sidebar-mini');
+                        sidebar_mini_active = true;
+                        blackDashboard.showSidebarMessage('Sidebar mini activated...');
+                    }
+
+                    // we simulate the window Resize so the charts will get updated in realtime.
+                    var simulateWindowResize = setInterval(function () {
+                        window.dispatchEvent(new Event('resize'));
+                    }, 180);
+
+                    // we stop the simulation of Window Resize after the animations are completed
+                    setTimeout(function () {
+                        clearInterval(simulateWindowResize);
+                    }, 1000);
+                });
+
+                $('.switch-change-color input').on("switchChange.bootstrapSwitch", function () {
+                    var $btn = $(this);
+
+                    if (white_color == true) {
+
+                        $('body').addClass('change-background');
+                        setTimeout(function () {
+                            $('body').removeClass('change-background');
+                            $('body').removeClass('white-content');
+                        }, 900);
+                        white_color = false;
+                    } else {
+
+                        $('body').addClass('change-background');
+                        setTimeout(function () {
+                            $('body').removeClass('change-background');
+                            $('body').addClass('white-content');
+                        }, 900);
+
+                        white_color = true;
+                    }
+
+
+                });
+
+                $('.light-badge').click(function () {
+                    $('body').addClass('white-content');
+                });
+
+                $('.dark-badge').click(function () {
+                    $('body').removeClass('white-content');
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Javascript method's body can be found in assets/js/demos.js
+            demo.initDashboardPageCharts();
+
+        });
+    </script>
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+    <script>
+        window.TrackJS &&
+            TrackJS.install({
+                token: "ee6fab19c5a04ac1a32a645abde4613a",
+                application: "black-dashboard-free"
+            });
+    </script>
+</body>
+
+</html>
